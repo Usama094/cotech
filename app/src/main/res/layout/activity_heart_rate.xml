@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/appimage">
+
+    <LinearLayout
+        android:id="@+id/topNavbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:background="@color/purple_500">
+
+        <TextView
+            android:id="@+id/homeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Health Meter"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginEnd="8dp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/topNavbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="24dp"
+            android:paddingBottom="24dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/heartRateCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="8dp"
+                android:background="@color/white">
+
+                <EditText
+                    android:id="@+id/heartRateInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@android:color/white"
+                    android:hint="Enter Heart Rate"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:padding="16dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    tools:ignore="TouchTargetSizeCheck" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/bloodSugarCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="8dp"
+                android:background="@color/white">
+
+                <EditText
+                    android:id="@+id/bloodSugarInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@android:color/white"
+                    android:hint="Enter Blood Sugar Level"
+                    android:inputType="numberDecimal"
+                    android:maxLength="5"
+                    android:padding="16dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    tools:ignore="TouchTargetSizeCheck" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/waterIntakeCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="8dp"
+                android:background="@color/white">
+
+                <EditText
+                    android:id="@+id/waterIntakeInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@android:color/white"
+                    android:hint="Enter Glasses of Water"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:padding="16dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    tools:ignore="TouchTargetSizeCheck" />
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/checkHealthStatusButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/waterIntakeCard"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:background="@color/Lavender"
+                android:paddingStart="24dp"
+                android:paddingEnd="24dp"
+                android:text="Check Health Status"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:ignore="TextContrastCheck" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottomNavbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"  android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:background="@android:color/white">
+
+        <ImageView
+            android:id="@+id/icon1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/baseline_add_home_24"  android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:padding="4dp"
+            android:layout_margin="4dp"  android:maxWidth="100dp"  android:maxHeight="100dp" />  <ImageView
+        android:id="@+id/icon2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/baseline_beenhere_24"  android:layout_gravity="center"
+        android:adjustViewBounds="true"
+        android:padding="4dp"
+        android:layout_margin="4dp"  android:maxWidth="100dp"  android:maxHeight="100dp" />  <ImageView
+        android:id="@+id/icon3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/baseline_device_thermostat_24"  android:layout_gravity="center"
+        android:adjustViewBounds="true"
+        android:padding="4dp"
+        android:layout_margin="4dp"  android:maxWidth="100dp"  android:maxHeight="100dp" />  <ImageView
+
+        android:id="@+id/icon4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/baseline_add_location_alt_24"
+        android:layout_gravity="center"
+        android:adjustViewBounds="true"
+        android:padding="4dp"
+        android:layout_margin="4dp"
+        android:maxWidth="100dp"
+        android:maxHeight="100dp" />
+    </LinearLayout>
+</RelativeLayout>
